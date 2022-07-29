@@ -100,7 +100,41 @@
 			var datetext = $('input[name=dateField]').val();//grab data from textbox
 			var formDate = new Date(datetext);//create a date from form input
 			var today = new Date();
-			
+            var month = new Date(formDate).getMonth();
+
+
+            switch(month ){
+            // SPRING
+            case 2: case 3: case 4:
+
+                $("html").css("background-color", "#2B7129")
+                $("#wear").attr("src","images/spring-wear.jpg")
+                $("#logo").attr("src","images/spring.gif")
+                $("header h3").text("Jump into Spring!")
+            break;
+            // SUMMER
+            case 5: case 6: case 7:
+                $("html").css("background-color", "#EBA52B")
+                $("#wear").attr("src","images/summer-wear.jpg")
+                $("#logo").attr("src","images/summer.gif")
+                $("header h3").text("Shine into Summer!")
+            break;
+            // FALL
+            case 8: case 9: case 10:
+                $("html").css("background-color", "#A81124")
+                $("#wear").attr("src","images/fall-wear.jpg")
+                $("#logo").attr("src","images/fall.gif")
+                $("header h3").text("Fall into Fall!")
+            break;
+            // WINTER
+            case 11: case 0: case 1:
+                $("html").css("background-color", "#005393")
+                $("#wear").attr("src","images/winter-wear.jpg")
+                $("#logo").attr("src","images/winter.gif")
+                $("header h3").text("Slide into Winter!")
+            break;
+
+        }
 			if(formDate > today)
 			{
 				alert(datetext + " is in the future!");
@@ -109,6 +143,10 @@
 			}
 		});
 	});
+
+
     </script>
+    <script src="js/main.js"></script>
+    <script src="js/seasonal-styles.js"></script>
   </body>
 </html>
