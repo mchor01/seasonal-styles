@@ -18,7 +18,9 @@ img.flexible {
 	width:33%; /* approximate size taken on screen in maximum view */
 }
 p {margin:10px;}
-
+#textblock{
+	display: inline-block;
+}
 h1,h2,h3,h4,h5,h6{
 	font-weight:normal;
 	margin:10px;
